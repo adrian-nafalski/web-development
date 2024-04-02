@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container .left-side {
+    position: relative;
+    background: #48494b;
+    padding: 50px;
+    border-bottom-right-radius: 25px;
+}
+
+.container .right-side {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+    padding: 60px;
+    justify-content: space-between;
+}
+
+.container .bottom-side {
+    padding: 40px 60px 40px 60px;
+    grid-column: 1/3;
+}
+
+/* Left-side */
+.profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile .circle-profile {
+    display: flex;
+    position: relative;
+    width: 202px;
+    height: 202px;
+    background-color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .imgProfile {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .imgProfile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profile p {
+    color: #fff;
+    font-size: 1em;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+    line-height: 2em;
+}
+
+.break-line {
+    margin-top: -10px;
+    margin-bottom: 15px;
+    border: 1.25px solid #fff;
+}
+
+#profile-line {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    width: 55%;
+}
+
+.contact-info {
+    padding-top: 40px;
+}
+
+.contact-info p {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    position: relative;
+    color: #fff;
+}
+
+.contact-info ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+
+#contact-info-list {
+    cursor: pointer;
+}
+
+.contact-info ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.contact-info ul li span {
+    color: whitesmoke;
+    font-weight: 300;
+}
+
+.contact-info h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Right-side */
+.right-side-line-break {
+    margin-top: 6px;
+    border: 1.25px solid #000;
+    margin-bottom: 20px;
+}
+.project {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.project p {
+    padding-top: 10px;
+}
+
+.project a {
+    text-decoration: none;
+    color: #000;
+    align-self: center;
+    padding-top: 1em;
+}
+
+.experience-section {
+    margin-top: 20px;
+}
+
+.experience-section h4 {
+    margin-top: 5px;
+}
+
+.experience-section ul {
+    margin-top: 10px;
+}
+
+.experience-section ul li {
+    margin-top: 5px;
+}
+
+.experience ul {
+    list-style: inside;
+}
+
+.experience li {
+    list-style-type: circle;
+}
+
+/* Bottom-side */
+#rodo p {
+    font-size: 0.75em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        margin: 0;
+    }
+
+    .container .bottom-side {
+        background-color: #fff;
+    }
+
+    .experience {
+        margin-top: 25px;
+    }
+}
