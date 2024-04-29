@@ -1,0 +1,55 @@
+<html>
+<head>
+</head>
+<body >
+<canvas id="canvas" width="500" height="300"></canvas>
+<script type="application/javascript">
+function draw() {
+var canvas = document.getElementById('canvas');
+if (canvas.getContext) {
+var ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'rgb(255, 255, 255)';
+ctx.fillRect(0, 0, 500, 300);
+
+ctx.lineWidth=5;
+ctx.strokeStyle = 'rgb(0,0,199)';
+ctx.strokeRect(14, 14, 500-28, 300-28); 
+}
+}
+draw();
+
+function windowToCanvas(canvas, x, y) {
+   var bbox = canvas.getBoundingClientRect();
+
+   return { x: x - bbox.left * (canvas.width  / bbox.width),
+            y: y - bbox.top  * (canvas.height / bbox.height)
+          };
+}
+var img = new Image();   // Create new img element
+img.src = 'dot.gif';     // Set source path
+var isdown = 0;       // Memory, if mouse button is pressed
+
+canvas.onmousedown = function (e) {
+   isdown = 1;
+   var loc = windowToCanvas(canvas, e.clientX, e.clientY);
+
+   var ctx = canvas.getContext('2d');
+   ctx.drawImage(img, loc.x-4, loc.y-4, 9, 9);
+};
+canvas.onmouseup = function (e) {
+   isdown = 0;
+};
+
+canvas.onmousemove = function (e) {
+   var loc = windowToCanvas(canvas, e.clientX, e.clientY);
+   
+   var ctx = canvas.getContext('2d');
+   if(isdown == 1) {
+    // left click
+  ctx.drawImage(img, loc.x-4, loc.y-4, 9, 9);}
+};
+</script>
+
+</body>
+</html>

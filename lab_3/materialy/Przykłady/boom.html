@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* definiujemy pozycjê i rozmiar tkaniny */
+        #main {
+            width: 640px;
+            height: 480px;
+            margin: auto;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        var canvas
+        var ctx // uchwyt kontekstu tkaniny pozwalaj¹cy na operowanie na niej 
+        var pos_x = 320, pos_y = 300 // zmienne pozycji bohatera 
+        var pos_x_op = 120, pos_y_op = 100
+        var welcome_screen = true // stan ekranu powitalnego 
+
+        /** * funkcja rysuj¹ca bohatera na tkaninie */
+        function draw_hero() {
+            ctx.save() // zachowanie stanu kontekstu
+            ctx.fillStyle = 'rgba(255, 0, 0, 1)'; // ustawienie koloru wype³nienia 
+            ctx.translate(pos_x, pos_y) // przesuniêcie tkaniny tak, aby narysowny 
+            // bohater znalaz³ siê w odpowiednim miejscu 
+            ctx.fillRect(0, 0, 10, 10) // narysowanie bohatera 
+            ctx.restore() // przywrócenie stanu kontekstu 
+        }
+
+        function draw_opponent() {
+            ctx.save() // zachowanie stanu kontekstu
+            ctx.fillStyle = 'rgba(0, 255, 0, 1)'; // ustawienie koloru wype³nienia 
+            ctx.translate(pos_x_op, pos_y_op) // przesuniêcie tkaniny tak, aby narysowny 
+            // bohater znalaz³ siê w odpowiednim miejscu 
+            ctx.fillRect(0, 0, 10, 10) // narysowanie bohatera 
+            ctx.restore() // przywrócenie stanu kontekstu 
+        }
+
+        function draw_boom() {
+            ctx.save() // zachowanie stanu kontekstu
+            ctx.fillStyle = 'rgba(255, 255, 0, 1)'; // ustawienie koloru wype³nienia 
+            ctx.translate(pos_x_op, pos_y_op) // przesuniêcie tkaniny tak, aby narysowny 
+            // bohater znalaz³ siê w odpowiednim miejscu 
+            ctx.fillRect(0, 0, 100, 100) // narysowanie bohatera 
+            ctx.restore() // przywrócenie stanu kontekstu 
+        }
+        
+
+        /** * funkcja wywo³ywana cyklicznie przerysowuj¹ca tkaninê */
+
+        function redraw() {
+            ctx.clearRect(0, 0, 640, 480) // czyszczenie tkaniny 
+            draw_hero()
+            draw_opponent()
+        }
+        /** * funkcja inicjalizuj¹ca grê i tworz¹ca ekran powitalny */
+        function init() {
+            window.addEventListener("keydown", keyListener, false)
+            // skojarzenie funkcji obs³ugi klawiatury ze zdarzeniem 
+            canvas = document.getElementById('game')
+            // pobranie wskazania na element tkaniny 
+            ctx = canvas.getContext('2d') // pobranie kontekstu grafiki dwuwymiarowej dla tkaniny 
+            ctx.font = '48px sans-serif'
+            ctx.textAlign = 'center' // ustawienie dla tkaniny kroju pisma i sposobu wyrównania 
+            // tekstu 
+            ctx.fillText('READY PLAYER ONE?', 320, 240) // umieszczenie napisu na ekranie powitalnym 
+            draw_hero()
+        } /** * funkcja obs³ugi klawiatury */
+
+
+        function collision(){
+            if(pos_x==pos_x_op && pos_y==pos_y_op){
+                console.log("booom")
+                draw_boom()
+            }
+        }
+
+        function keyListener(e) {
+            if (welcome_screen) { // je¿eli ekran powitalny to wyczyœæ 
+                ctx.clearRect(0, 0, 640, 480)
+                welcome_screen = false
+                window.setInterval(redraw, 10) // pod³¹czenie funckji przerysowania tkaniny 
+            }
+            
+            switch (e.keyCode) {
+                case 37: // naciœniêto strza³kê w lewo 
+                    pos_x -= 10
+                    break
+                case 38: // naciœniêto strza³kê w górê 
+                    pos_y -= 10
+                    break
+                case 39: // naciœniêto strza³kê w prawo 
+                    pos_x += 10
+                    break
+                case 40: 
+                    pos_y += 10// naciœniêto strza³kê w dó³ break 
+                    break
+            }
+
+            collision()
+        }
+
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="main">
+        <canvas id="game" width="640" height="480">
+            Zacznij w koñcu u¿ywaæ wspó³czesnej przegl¹darki!
+        </canvas>
+    </div>
+</body>
+
+</html>

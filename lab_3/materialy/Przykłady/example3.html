@@ -1,0 +1,101 @@
+<html>
+<head>
+</head>
+<body >
+<canvas id="canvas"
+ width="500" height="300"></canvas>
+
+<script type="application/javascript">
+function draw() {
+var canvas = document.getElementById('canvas');
+if (canvas.getContext) {
+var ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'rgb(255, 255, 255)';
+ctx.fillRect(0, 0, 500, 300);
+
+ctx.lineWidth=5;
+ctx.strokeStyle = 'rgb(0,0,199)';
+ctx.strokeRect(14, 14, 500-28, 300-28); 
+}
+}
+draw();
+
+function windowToCanvas(canvas, x, y) {
+   var bbox = canvas.getBoundingClientRect();
+
+   return { x: x - bbox.left * (canvas.width  / bbox.width),
+            y: y - bbox.top  * (canvas.height / bbox.height)
+          };
+}
+var img = new Image();   // Create new img element
+img.src = 'dot.gif';     // Set source path
+var isdown = 0;       // Memory, if mouse button is pressed
+var colorset = 2;     // blue
+
+canvas.onmousedown = function (e) {
+   isdown = 1;
+};
+canvas.onmouseup = function (e) {
+   isdown = 0;
+};
+
+canvas.onmousemove = function (e) {
+   var loc = windowToCanvas(canvas, e.clientX, e.clientY);
+   
+   var ctx = canvas.getContext('2d');
+   switch(colorset) {
+    case 1:
+        ctx.fillStyle = 'rgb(255, 0, 0)';
+        break;
+    case 2:
+        ctx.fillStyle = 'rgb(0, 0, 255)';
+        break;
+    case 3:
+        ctx.fillStyle = 'rgb(0, 155, 0)';
+        break;
+    case 4:
+        ctx.fillStyle = 'rgb(0, 155, 255)';
+        break;
+    case 6:
+        ctx.fillStyle = 'rgb(255, 199, 0)';
+        break;
+    default:
+        ctx.fillStyle = 'rgb(0, 0, 0)';
+} 
+   if(isdown == 1) {
+    // left mouse button is down
+  ctx.fillRect(loc.x-3, loc.y-3, 7, 7);}
+};
+
+function setred() {
+  colorset = 1 ;
+};
+function setblue() {
+  colorset = 2 ;
+};
+function setgreen() {
+  colorset = 3 ;
+};
+function setcyan() {
+  colorset = 4 ;
+};
+function setblack() {
+  colorset = 5 ;
+};
+function setyellow() {
+  colorset = 6 ;
+};
+</script>
+
+<br><br>
+<img src="reddot.png" onclick="setred()"> 
+<img src="bluedot.png" onclick="setblue()"> 
+<img src="greendot.png" onclick="setgreen()"> 
+<img src="blackdot.png" onclick="setblack()"> 
+<img src="yellowdot.png" onclick="setyellow()"> 
+<img src="cyandot.png" onclick="setcyan()"> 
+
+
+</body>
+</html>

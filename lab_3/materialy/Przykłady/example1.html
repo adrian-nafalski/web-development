@@ -1,0 +1,40 @@
+
+<html>
+<head>
+</head>
+<body >
+<canvas id="canvas" width="200" height="100"></canvas>
+<script type="application/javascript">
+function draw() {
+var canvas = document.getElementById('canvas');
+if (canvas.getContext) {
+var ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'rgb(125, 152, 255);'
+ctx.fillRect(0, 0, 199, 99);
+
+ctx.lineWidth=5;
+ctx.strokeStyle = 'rgb(0,0,199)';
+ctx.strokeRect(14, 14, 200-28, 100-28)
+}
+}
+draw();
+
+function windowToCanvas(canvas, x, y) {
+   var bbox = canvas.getBoundingClientRect();
+
+   return { x: x - bbox.left * (canvas.width  / bbox.width),
+            y: y - bbox.top  * (canvas.height / bbox.height)
+          };
+}
+
+canvas.onmousedown = function (e) {
+   var loc = windowToCanvas(canvas, e.clientX, e.clientY);
+
+   var ctx = canvas.getContext('2d');
+   ctx.strokeRect(loc.x-10, loc.y-10,20,20);
+};
+</script>
+
+</body>
+</html>
