@@ -10,9 +10,12 @@
 
 - [**Co znajduje się w tym repo?**](#co-znajduje-się-w-tym-repo)
 - [**Projekty**](#projekty)
-  - [📄 **Projekt 1 - CV**](#-projekt-1---cv)
+  - [📄 **Projekt - CV**](#-projekt---cv)
     - [**Opis zadania**](#opis-zadania)
     - [**Realizacja zadania**](#realizacja-zadania)
+  - [🎮 **Projekt - Gra z wykorzystaniem Canvas**](#-projekt---gra-z-wykorzystaniem-canvas)
+    - [**Opis zadania**](#opis-zadania-1)
+    - [**Realizacja zadania**](#realizacja-zadania-1)
 - [📚 **Materiały do nauki, z których korzystałem**](#-materiały-do-nauki-z-których-korzystałem)
 
 ---
@@ -25,7 +28,7 @@
 
 # **Projekty**
 
-## 📄 **Projekt 1 - CV**
+## 📄 **Projekt - CV**
 
 ### **Opis zadania**
 
@@ -33,13 +36,31 @@ Stworzyć CV z wykorzystaniem HTML5 i CSS. Strona powinna przechodzić walidacj�
 
 Szczegóły dotyczące projektu znajdują się w plikach:
 
--   [lab_1](lab_1/materialy/)
+-   [lab_1](lab_1/)
 
 ### **Realizacja zadania**
 
 ![alt text](materialy/cv_project.jpg "CV project")
 
 Zrealizowany projekt znajduje się [tutaj](projekty/cv/).
+
+---
+
+## 🎮 **Projekt - Gra z wykorzystaniem Canvas**
+
+### **Opis zadania**
+
+Stworzyć grę z wykorzystaniem HTML, CSS oraz JavaScript. Gra powinna wykorzystywać Canvas.
+
+Szczegóły dotyczące tego projektu znajdują się w plikach:
+
+-   [lab_3](lab_3/)
+
+### **Realizacja zadania**
+
+![alt text](materialy/game.gif "Game GIF")
+
+Zrealizowany projekt znajduje się [tutaj](projekty/game/).
 
 ---
 

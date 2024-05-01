@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    order: 1;
+}
+
+canvas {
+    display: block;
+    order: 2;
+}
+
+p {
+    margin-top: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10px;
+    order: 3;
+}
