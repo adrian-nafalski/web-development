@@ -9,6 +9,7 @@
 ## :clipboard: **Spis treści**
 
 - [**Co znajduje się w tym repo?**](#co-znajduje-się-w-tym-repo)
+- [**Zadania**](#zadania)
 - [**Projekty**](#projekty)
   - [📄 **Projekt - CV**](#-projekt---cv)
     - [**Opis zadania**](#opis-zadania)
@@ -23,6 +24,12 @@
 # **Co znajduje się w tym repo?**
 
 > Wszelkie materiały powiązane z wykonaniem z przedmiotem "Web Development"
+
+---
+
+# **Zadania**
+
+W folderze [zadania](zadania/) znajdują się rozwiązania zadań z laboratoriów. Wykorzystywane były między innymi takie technologie, jak: **NodeJS**, **Express.js**, **Swagger**, **Postman**, **Bootstrap**, **Moongoose**, oraz baza danych NoSQL **MongoDB**.
 
 ---
 

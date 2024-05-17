@@ -1,0 +1,38 @@
+<br />
+Nazwa:
+{{ item.nazwa }}
+<br />
+Rozmiar:
+{{ item.rozmiar }}
+<br />
+<div style="margin-left: 25%;">
+    <img src="../{{ item.sciezka }}/{{ item.nazwa }}.jpg" width="500">
+</div>
+
+{{!-- KOMENTARZE --}}
+
+{{#each commentsList}}
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <p>{{ this.tresc }}</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            komentarz od <cite title="Source Title">{{ this.user }}</cite>
+        </figcaption>
+    </figure>
+{{/each}}
+
+<center>
+    <div class="col-sm-2">
+        <form action="../comments/add/{{ item.id }}" method="post">
+            <div class="form-group">
+                <label for="user">Autor</label>
+                <input class="form-control" type="text" id="user" name="user">
+                <label for="tresc">Treść:</label>
+                <input class="form-control" type="text" id="tresc" name="tresc">
+                <input class="form-control" type="hidden" id="id_zdjecia" name="id_zdjecia" value="{{ item.id }}">
+            </div>
+            <input type="submit" value="Komentuj" class="btn btn-primary">
+        </form>
+    </div>
+</center>

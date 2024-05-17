@@ -1,0 +1,11 @@
+<div class="col-sm-2">
+    <form action="../update/{{ id }}" method="post">
+        <div class="form-group">
+            <label for="nazwa">Nazwa:</label>
+            <input class="form-control" type="text" id="nazwa" name="nazwa" value="{{ item.nazwa }}"><br><br>
+            <label for="rozmiar">Rozmiar:</label>
+            <input class="form-control" type="number" id="rozmiar" name="rozmiar" value="{{ item.rozmiar }}"><br><br>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
