@@ -68,7 +68,7 @@ Szczegóły dotyczące projektu znajdują się w plikach:
 
 ### **Realizacja zadania**
 
-![alt text](materialy/calculator.jpg "CV project")
+![alt text](materialy/calculator.jpg "Calculator project")
 
 Zrealizowany projekt znajduje się [tutaj](projekty/calculator/).
 
