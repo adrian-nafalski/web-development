@@ -14,9 +14,12 @@
   - [📄 **Projekt - CV**](#-projekt---cv)
     - [**Opis zadania**](#opis-zadania)
     - [**Realizacja zadania**](#realizacja-zadania)
-  - [🎮 **Projekt - Gra z wykorzystaniem Canvas**](#-projekt---gra-z-wykorzystaniem-canvas)
+  - [🔢 **Projekt - Kalkulator**](#-projekt---kalkulator)
     - [**Opis zadania**](#opis-zadania-1)
     - [**Realizacja zadania**](#realizacja-zadania-1)
+  - [🎮 **Projekt - Gra z wykorzystaniem Canvas**](#-projekt---gra-z-wykorzystaniem-canvas)
+    - [**Opis zadania**](#opis-zadania-2)
+    - [**Realizacja zadania**](#realizacja-zadania-2)
 - [📚 **Materiały do nauki, z których korzystałem**](#-materiały-do-nauki-z-których-korzystałem)
 
 ---
@@ -50,6 +53,24 @@ Szczegóły dotyczące projektu znajdują się w plikach:
 ![alt text](materialy/cv_project.jpg "CV project")
 
 Zrealizowany projekt znajduje się [tutaj](projekty/cv/).
+
+---
+
+## 🔢 **Projekt - Kalkulator**
+
+### **Opis zadania**
+
+Korzystając z faktu, że na poziomie interpretera ES przeglądarki za pomocą metod obiektu document możliwe jest budowanie struktury DOM stwórz aplikację kalkulatora w oparciu o załączoną postać startową.
+
+Szczegóły dotyczące projektu znajdują się w plikach:
+
+-   [lab_1](lab_1/)
+
+### **Realizacja zadania**
+
+![alt text](materialy/calculator.jpg "CV project")
+
+Zrealizowany projekt znajduje się [tutaj](projekty/calculator/).
 
 ---
 
