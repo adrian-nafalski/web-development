@@ -17,9 +17,12 @@
   - [🔢 **Projekt - Kalkulator**](#-projekt---kalkulator)
     - [**Opis zadania**](#opis-zadania-1)
     - [**Realizacja zadania**](#realizacja-zadania-1)
-  - [🎮 **Projekt - Gra z wykorzystaniem Canvas**](#-projekt---gra-z-wykorzystaniem-canvas)
+  - [⭕❌ **Projekt - Kółko i Krzyżyk**](#-projekt---kółko-i-krzyżyk)
     - [**Opis zadania**](#opis-zadania-2)
     - [**Realizacja zadania**](#realizacja-zadania-2)
+  - [🎮 **Projekt - Gra z wykorzystaniem Canvas**](#-projekt---gra-z-wykorzystaniem-canvas)
+    - [**Opis zadania**](#opis-zadania-3)
+    - [**Realizacja zadania**](#realizacja-zadania-3)
 - [📚 **Materiały do nauki, z których korzystałem**](#-materiały-do-nauki-z-których-korzystałem)
 
 ---
@@ -71,6 +74,24 @@ Szczegóły dotyczące projektu znajdują się w plikach:
 ![alt text](materialy/calculator.jpg "Calculator project")
 
 Zrealizowany projekt znajduje się [tutaj](projekty/calculator/).
+
+---
+
+## ⭕❌ **Projekt - Kółko i Krzyżyk**
+
+### **Opis zadania**
+
+Napisać grę w kółko i krzyżyk na podstawie algorytmu minimax. Do realizacji tego zadania należy wykorzystać HTML, CSS oraz JavaScript.
+
+Szczegóły dotyczące projektu znajdują się w plikach:
+
+-   [lab_1](lab_1/)
+
+### **Realizacja zadania**
+
+![alt text](materialy/tic_tac_toe.jpg "Tic Tac Toe project")
+
+Zrealizowany projekt znajduje się [tutaj](projekty/tic_tac_toe/).
 
 ---
 

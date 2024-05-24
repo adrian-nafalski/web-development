@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+hr {
+    width: 500px;
+    height: 2px;
+    background-color: black;
+    border: none;
+}
+
+#board {
+    width: 450px;
+    height: 450px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tile {
+    width: 147px;
+    height: 147px;
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tile:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.winner {
+    background-color: lightgray;
+    color: red;
+    animation: winnerAnimation 1s infinite alternate;
+}
+
+@keyframes winnerAnimation {
+    from {
+        background-color: lightgray;
+    }
+    to {
+        background-color: gold;
+    }
+}
+
+.horizontal-line {
+    border-bottom: 3px solid black;
+}
+
+.vertical-line {
+    border-right: 3px solid black;
+}
+
+#endGame {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#endGame p {
+    font-size: 1.5em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
